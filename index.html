@@ -18,7 +18,6 @@
     <meta property="og:image" content="assets/matej-kolaric-photo.jpeg">
     <meta name="theme-color" content="#f7f8f5">
     <link rel="icon" href="favicon.svg" type="image/svg+xml">
-    <link rel="preconnect" href="https://api.github.com">
     <link rel="stylesheet" href="styles.css">
   </head>
   <body>
@@ -32,6 +31,7 @@
         <a href="#profile">Profile</a>
         <a href="#skills">Skills</a>
         <a href="#work">Work</a>
+        <a href="#experience">Experience</a>
         <a href="cv.html">CV</a>
         <a href="#contact">Contact</a>
       </nav>
@@ -102,6 +102,27 @@
         </div>
       </section>
 
+      <section class="section-shell" aria-label="Career stats">
+        <div class="stat-grid">
+          <article>
+            <strong>5+</strong>
+            <span>Years building software</span>
+          </article>
+          <article>
+            <strong>1,059</strong>
+            <span>GitHub contributions last year</span>
+          </article>
+          <article>
+            <strong>3</strong>
+            <span>Product domains: healthcare, commerce, marketplace</span>
+          </article>
+          <article>
+            <strong>2</strong>
+            <span>Mobile platforms: iOS and Android</span>
+          </article>
+        </div>
+      </section>
+
       <section class="section-shell" id="skills" aria-labelledby="skills-title">
         <div class="section-heading">
           <p class="eyebrow">Strengths</p>
@@ -168,10 +189,10 @@
           <div class="section-heading split">
             <div>
               <p class="eyebrow">Selected Work</p>
-              <h2 id="work-title">Featured product and public code.</h2>
+              <h2 id="work-title">Product work without exposing old learning repos.</h2>
             </div>
-            <a class="text-link" href="https://github.com/kolaricmatej?tab=repositories" target="_blank" rel="noreferrer">
-              View repositories
+            <a class="text-link" href="https://github.com/kolaricmatej" target="_blank" rel="noreferrer">
+              GitHub profile
               <i data-lucide="arrow-up-right" aria-hidden="true"></i>
             </a>
           </div>
@@ -224,22 +245,96 @@
             </article>
           </div>
 
-          <h3 class="repo-section-title">Recent public GitHub repositories</h3>
-          <div class="repo-grid" id="repo-grid" aria-live="polite">
-            <article class="repo-card">
-              <div class="repo-card-top">
-                <h3>kolaricmatej.github.io</h3>
-                <span>Portfolio</span>
-              </div>
+          <div class="activity-panel" aria-labelledby="activity-title">
+            <div class="activity-copy">
+              <p class="eyebrow">GitHub Activity</p>
+              <h3 id="activity-title">Consistent engineering activity, without listing university repositories.</h3>
               <p>
-                Clean GitHub Pages portfolio and CV hub for professional profile,
-                selected work, downloadable CV, and contact details.
+                Repository cards are intentionally hidden because older public repos are
+                mostly university and learning work. Companies can still review my
+                contribution activity and contact me for relevant code samples.
               </p>
-              <a href="https://github.com/kolaricmatej/kolaricmatej.github.io" target="_blank" rel="noreferrer">
-                Open repository
+              <a class="text-link" href="https://github.com/kolaricmatej" target="_blank" rel="noreferrer">
+                Open GitHub activity
+                <i data-lucide="arrow-up-right" aria-hidden="true"></i>
               </a>
-            </article>
+            </div>
+            <div class="activity-card" aria-label="GitHub contribution summary">
+              <strong>1,059</strong>
+              <span>contributions in the last year</span>
+              <div class="contribution-grid" aria-hidden="true">
+                <i></i><i></i><i></i><i></i><i class="lvl-2"></i><i></i><i class="lvl-3"></i><i></i><i></i><i class="lvl-1"></i><i class="lvl-4"></i><i></i>
+                <i></i><i></i><i class="lvl-2"></i><i class="lvl-3"></i><i class="lvl-1"></i><i></i><i></i><i class="lvl-2"></i><i></i><i class="lvl-3"></i><i class="lvl-4"></i><i class="lvl-2"></i>
+                <i></i><i class="lvl-1"></i><i class="lvl-3"></i><i></i><i class="lvl-2"></i><i class="lvl-1"></i><i></i><i class="lvl-3"></i><i class="lvl-1"></i><i class="lvl-4"></i><i class="lvl-4"></i><i class="lvl-3"></i>
+                <i></i><i></i><i class="lvl-2"></i><i class="lvl-1"></i><i></i><i class="lvl-3"></i><i></i><i class="lvl-2"></i><i class="lvl-3"></i><i></i><i class="lvl-4"></i><i class="lvl-2"></i>
+                <i></i><i class="lvl-1"></i><i></i><i class="lvl-2"></i><i></i><i></i><i class="lvl-3"></i><i></i><i class="lvl-2"></i><i class="lvl-1"></i><i class="lvl-3"></i><i></i>
+              </div>
+              <small>Private and public activity depends on GitHub visibility settings.</small>
+            </div>
           </div>
+        </div>
+      </section>
+
+      <section class="section-shell" id="experience" aria-labelledby="experience-home-title">
+        <div class="section-heading">
+          <p class="eyebrow">Experience</p>
+          <h2 id="experience-home-title">A concise timeline for hiring teams.</h2>
+        </div>
+
+        <div class="timeline-list">
+          <article>
+            <span>Jan 2026 - Present</span>
+            <div>
+              <h3>Mobile Developer - MyStor</h3>
+              <p>Building a cross-platform service marketplace for homeowners and household professionals across iOS and Android.</p>
+            </div>
+          </article>
+          <article>
+            <span>Oct 2025 - Dec 2025</span>
+            <div>
+              <h3>iOS Developer - KnightX</h3>
+              <p>Delivered SwiftUI e-commerce features using MVVM/MVVM-C and modern async networking.</p>
+            </div>
+          </article>
+          <article>
+            <span>Mar 2023 - Oct 2025</span>
+            <div>
+              <h3>iOS Developer - Glooko</h3>
+              <p>Built diabetes management features, SwiftUI modernization, Bluetooth device management, and medical-user workflows.</p>
+            </div>
+          </article>
+          <article>
+            <span>Oct 2020 - Mar 2023</span>
+            <div>
+              <h3>Backend Developer - Glooko / Code Consulting</h3>
+              <p>Built healthcare and fitness backend systems with Python, Node.js, FastAPI, Flask, PostgreSQL, AWS, Docker, and GraphQL.</p>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section class="section-shell" aria-labelledby="achievements-home-title">
+        <div class="section-heading">
+          <p class="eyebrow">Highlights</p>
+          <h2 id="achievements-home-title">Proof points from the CV.</h2>
+        </div>
+
+        <div class="highlight-grid">
+          <article>
+            <i data-lucide="repeat-2" aria-hidden="true"></i>
+            <h3>Backend to iOS transition</h3>
+            <p>Moved from backend architecture into modern Swift development while keeping full-stack product context.</p>
+          </article>
+          <article>
+            <i data-lucide="activity" aria-hidden="true"></i>
+            <h3>Medical product accuracy</h3>
+            <p>Worked on blood glucose tracking, insulin dose calculation, and Bluetooth medical device integration.</p>
+          </article>
+          <article>
+            <i data-lucide="layers" aria-hidden="true"></i>
+            <h3>Architecture ownership</h3>
+            <p>Helped shape microservice architecture, secure data flows, and project infrastructure from scratch.</p>
+          </article>
         </div>
       </section>
 

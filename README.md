@@ -11,4 +11,4 @@ Static GitHub Pages portfolio for `kolaricmatej.github.io`.
 
 ## Update
 
-Edit the text in `index.html` and `cv.html` to match the latest CV details. The homepage includes MyStor as the featured product and tries to load recent public repositories from the GitHub API, falling back to static content if the request is unavailable.
+Edit the text in `index.html` and `cv.html` to match the latest CV details. The homepage includes MyStor as the featured product, a GitHub activity summary, experience highlights, and a downloadable CV.
