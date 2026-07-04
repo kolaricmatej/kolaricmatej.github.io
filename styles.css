@@ -1213,7 +1213,8 @@ h3 {
 
   .hero {
     min-height: auto;
-    padding: 32px 0 30px;
+    gap: 24px;
+    padding: 30px 0 26px;
   }
 
   .hero::after {
@@ -1229,7 +1230,25 @@ h3 {
   }
 
   .hero-copy {
+    margin-top: 18px;
     font-size: 17px;
+  }
+
+  .hero-actions {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 10px;
+    margin-top: 26px;
+  }
+
+  .hero-actions .button {
+    width: 100%;
+    min-height: 48px;
+    padding: 10px 12px;
+  }
+
+  .hero-actions .button-ghost {
+    grid-column: 1 / -1;
   }
 
   .hero-content {
@@ -1242,7 +1261,7 @@ h3 {
 
   .hero-visual {
     grid-template-columns: 1fr;
-    justify-items: start;
+    justify-items: stretch;
     gap: 0;
   }
 
@@ -1251,29 +1270,39 @@ h3 {
   }
 
   .profile-photo {
-    width: 132px;
-    height: 172px;
+    width: 112px;
+    height: 142px;
   }
 
   .portrait-card {
-    padding: 7px;
+    display: grid;
+    width: 100%;
+    grid-template-columns: 112px minmax(0, 1fr);
+    align-items: stretch;
+    gap: 12px;
+    padding: 10px;
   }
 
   .portrait-card::before {
-    right: -7px;
-    bottom: 24px;
-    width: 7px;
+    top: 10px;
+    right: -8px;
+    bottom: 10px;
+    width: 8px;
   }
 
   .portrait-badge {
     position: static;
-    max-width: 132px;
-    margin-top: 7px;
-    padding: 8px;
+    display: flex;
+    max-width: none;
+    min-width: 0;
+    flex-direction: column;
+    justify-content: center;
+    margin-top: 0;
+    padding: 14px;
   }
 
   .portrait-badge strong {
-    font-size: 12px;
+    font-size: 16px;
   }
 
   .profile-band,
