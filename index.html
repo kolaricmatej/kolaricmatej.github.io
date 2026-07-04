@@ -3,20 +3,20 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Matej Kolarić | Senior Software Developer</title>
+    <title>Matej Kolarić | Senior iOS & Backend Developer</title>
     <meta
       name="description"
       content="Portfolio and CV for Matej Kolarić, Senior Software Developer specializing in iOS, backend, healthcare, e-commerce, and marketplace products."
     >
     <meta name="author" content="Matej Kolarić">
-    <meta property="og:title" content="Matej Kolarić | Senior Software Developer">
+    <meta property="og:title" content="Matej Kolarić | Senior iOS & Backend Developer">
     <meta
       property="og:description"
       content="Senior software developer with 5+ years of experience across iOS, backend systems, healthcare, e-commerce, and marketplace products."
     >
     <meta property="og:type" content="website">
     <meta property="og:image" content="assets/matej-kolaric-photo.jpeg">
-    <meta name="theme-color" content="#f7f8f5">
+    <meta name="theme-color" content="#f6f4ef">
     <link rel="icon" href="favicon.svg" type="image/svg+xml">
     <link rel="stylesheet" href="styles.css">
   </head>
@@ -32,7 +32,7 @@
         <a href="#skills">Skills</a>
         <a href="#work">Work</a>
         <a href="#experience">Experience</a>
-        <a href="cv.html">CV</a>
+        <a class="nav-cta" href="cv.html">CV</a>
         <a href="#contact">Contact</a>
       </nav>
     </header>
@@ -62,20 +62,32 @@
               GitHub
             </a>
           </div>
+
+          <div class="hero-metrics" aria-label="Career snapshot">
+            <span><strong>5+</strong> years</span>
+            <span><strong>iOS</strong> SwiftUI, UIKit, Combine</span>
+            <span><strong>Backend</strong> FastAPI, PostgreSQL, AWS</span>
+          </div>
         </div>
 
         <div class="hero-visual" aria-label="Profile portrait and key signals">
-          <img
-            class="profile-photo"
-            src="assets/matej-kolaric-photo.jpeg"
-            alt="Portrait of Matej Kolarić"
-            width="280"
-            height="360"
-          >
+          <div class="portrait-card">
+            <img
+              class="profile-photo"
+              src="assets/matej-kolaric-photo.jpeg"
+              alt="Portrait of Matej Kolarić"
+              width="280"
+              height="360"
+            >
+            <div class="portrait-badge">
+              <span>Current focus</span>
+              <strong>MyStor marketplace</strong>
+            </div>
+          </div>
           <div class="signal-list" aria-label="Professional focus">
-            <span>5+ years in software engineering</span>
-            <span>iOS, SwiftUI, backend systems</span>
-            <span>Healthcare, e-commerce, marketplaces</span>
+            <span><i data-lucide="check" aria-hidden="true"></i>5+ years in software engineering</span>
+            <span><i data-lucide="check" aria-hidden="true"></i>iOS, SwiftUI, backend systems</span>
+            <span><i data-lucide="check" aria-hidden="true"></i>Healthcare, e-commerce, marketplaces</span>
           </div>
         </div>
       </section>
@@ -213,6 +225,11 @@
                 <span>Android SDK</span>
                 <span>REST APIs</span>
                 <span>Firebase</span>
+              </div>
+              <div class="project-snapshot" aria-label="MyStor project snapshot">
+                <span><strong>Role</strong> Mobile product development</span>
+                <span><strong>Scope</strong> iOS, Android, backend integration</span>
+                <span><strong>Outcome</strong> Public landing page and app delivery</span>
               </div>
             </div>
             <div class="project-actions">
@@ -392,7 +409,7 @@
 
     <footer class="site-footer">
       <span>Matej Kolarić</span>
-      <span>Senior Software Developer - Vukovar, Croatia</span>
+      <span>Senior iOS & Backend Developer - Vukovar, Croatia</span>
     </footer>
 
     <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.min.js"></script>
