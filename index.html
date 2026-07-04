@@ -27,7 +27,12 @@
         <span>Matej Kolarić</span>
       </a>
 
-      <nav class="nav-links" aria-label="Primary navigation">
+      <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="primary-navigation" data-menu-toggle>
+        <i data-lucide="menu" aria-hidden="true"></i>
+        <span class="sr-only">Open navigation</span>
+      </button>
+
+      <nav class="nav-links" id="primary-navigation" aria-label="Primary navigation">
         <a href="#profile">Profile</a>
         <a href="#skills">Skills</a>
         <a href="#work">Work</a>
@@ -41,6 +46,7 @@
       <section class="hero section-shell" aria-labelledby="hero-title">
         <div class="hero-content">
           <p class="eyebrow">Senior iOS & Backend Developer</p>
+          <p class="intro-line">Hello, I'm</p>
           <h1 id="hero-title">Matej Kolarić</h1>
           <p class="hero-copy">
             Senior Software Engineer with 5+ years of experience in backend and iOS
@@ -80,8 +86,9 @@
               height="360"
             >
             <div class="portrait-badge">
-              <span>Current focus</span>
-              <strong>MyStor marketplace</strong>
+              <span class="portrait-badge-label">Current focus</span>
+              <strong class="portrait-badge-title">MyStor marketplace</strong>
+              <strong class="portrait-badge-mobile">5+ years experience</strong>
             </div>
           </div>
           <div class="signal-list" aria-label="Professional focus">

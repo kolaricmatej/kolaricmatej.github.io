@@ -19,7 +19,12 @@
         <span>Matej Kolarić</span>
       </a>
 
-      <nav class="nav-links" aria-label="CV navigation">
+      <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="cv-navigation" data-menu-toggle>
+        <i data-lucide="menu" aria-hidden="true"></i>
+        <span class="sr-only">Open navigation</span>
+      </button>
+
+      <nav class="nav-links" id="cv-navigation" aria-label="CV navigation">
         <a href="index.html">Portfolio</a>
         <a href="assets/Matej_Kolaric.pdf" download>
           <i data-lucide="download" aria-hidden="true"></i>
