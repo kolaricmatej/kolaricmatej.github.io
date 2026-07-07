@@ -470,19 +470,18 @@ h3 {
 }
 
 .profile-band,
-.contact-band {
+.closing-band {
   padding: 78px 0;
   background: linear-gradient(135deg, #17212b 0%, #233544 100%);
   color: var(--surface);
 }
 
 .profile-band .eyebrow,
-.contact-band .eyebrow {
+.closing-band .eyebrow {
   color: #f3b38e;
 }
 
-.section-grid,
-.contact-grid {
+.section-grid {
   display: grid;
   grid-template-columns: minmax(0, 0.82fr) minmax(0, 1fr);
   gap: 56px;
@@ -651,8 +650,7 @@ h3 {
   line-height: 1;
 }
 
-.feature-card p,
-.cv-panel p {
+.feature-card p {
   margin: 16px 0 0;
   color: var(--ink-soft);
 }
@@ -1139,29 +1137,133 @@ h3 {
   line-height: 1.1;
 }
 
-.cv-panel {
-  display: grid;
-  grid-template-columns: minmax(0, 1fr) auto;
-  gap: 32px;
-  align-items: center;
-  margin: 88px 0;
-  padding: 34px;
-  border: 1px solid var(--line);
-  border-top: 4px solid var(--warm);
-  border-radius: var(--radius);
-  background: var(--surface);
-  box-shadow: var(--shadow);
+.closing-band {
+  position: relative;
+  overflow: hidden;
+  margin-top: 96px;
+  padding: 86px 0;
+  background:
+    radial-gradient(circle at 78% 12%, rgba(201, 149, 47, 0.24), transparent 30%),
+    linear-gradient(135deg, #101820 0%, #1b2a35 54%, #223849 100%);
 }
 
-.cv-actions {
+.closing-band::before {
+  position: absolute;
+  inset: 0 0 auto;
+  height: 4px;
+  background: linear-gradient(90deg, var(--accent), var(--warm));
+  content: "";
+}
+
+.closing-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1.05fr) minmax(340px, 0.8fr);
+  gap: 56px;
+  align-items: stretch;
+}
+
+.closing-copy {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.closing-copy h2 {
+  max-width: 740px;
+}
+
+.closing-copy p {
+  max-width: 680px;
+  margin: 18px 0 0;
+  color: rgba(255, 255, 255, 0.78);
+  font-size: 18px;
+}
+
+.closing-actions {
   display: flex;
   flex-wrap: wrap;
-  justify-content: flex-end;
   gap: 12px;
+  margin-top: 30px;
 }
 
-.contact-grid {
-  align-items: center;
+.closing-actions .button-primary {
+  background: var(--warm);
+  color: #101820;
+  box-shadow: 0 18px 34px rgba(0, 0, 0, 0.22);
+}
+
+.closing-actions .button-primary:hover {
+  background: #d8aa48;
+}
+
+.closing-actions .button-secondary {
+  border-color: rgba(255, 255, 255, 0.22);
+  background: rgba(255, 255, 255, 0.08);
+  color: var(--surface);
+}
+
+.closing-actions .button-secondary:hover {
+  border-color: rgba(255, 255, 255, 0.36);
+  background: rgba(255, 255, 255, 0.14);
+}
+
+.closing-proof {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 10px;
+  max-width: 780px;
+  margin-top: 36px;
+}
+
+.closing-proof span {
+  min-width: 0;
+  padding: 14px;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: var(--radius);
+  background: rgba(255, 255, 255, 0.06);
+  color: rgba(255, 255, 255, 0.74);
+  font-size: 13px;
+  font-weight: 720;
+  line-height: 1.4;
+}
+
+.closing-proof strong {
+  display: block;
+  color: var(--surface);
+  font-size: 15px;
+  line-height: 1.25;
+}
+
+.contact-panel {
+  padding: 24px;
+  border: 1px solid rgba(255, 255, 255, 0.16);
+  border-radius: var(--radius);
+  background:
+    linear-gradient(180deg, rgba(255, 255, 255, 0.12), rgba(255, 255, 255, 0.06));
+  box-shadow: 0 28px 70px rgba(0, 0, 0, 0.22);
+}
+
+.contact-panel-head {
+  display: flex;
+  align-items: end;
+  justify-content: space-between;
+  gap: 18px;
+  margin-bottom: 18px;
+  padding-bottom: 18px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.12);
+}
+
+.contact-panel-head span {
+  color: #f3b38e;
+  font-size: 12px;
+  font-weight: 850;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.contact-panel-head strong {
+  color: var(--surface);
+  font-size: 18px;
 }
 
 .contact-links {
@@ -1170,16 +1272,50 @@ h3 {
 }
 
 .contact-links a {
-  display: flex;
+  display: grid;
+  grid-template-columns: auto minmax(0, 1fr);
   align-items: center;
-  gap: 12px;
-  min-height: 52px;
-  padding: 12px 14px;
+  gap: 14px;
+  min-height: 70px;
+  padding: 14px;
   border: 1px solid rgba(255, 255, 255, 0.18);
   border-radius: var(--radius);
   background: rgba(255, 255, 255, 0.08);
   color: rgba(255, 255, 255, 0.9);
   font-weight: 780;
+}
+
+.contact-links a > svg {
+  width: 40px;
+  height: 40px;
+  padding: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.16);
+  border-radius: var(--radius);
+  background: rgba(255, 255, 255, 0.08);
+  color: #f3b38e;
+}
+
+.contact-links a span {
+  min-width: 0;
+}
+
+.contact-links small {
+  display: block;
+  margin-bottom: 2px;
+  color: rgba(255, 255, 255, 0.52);
+  font-size: 11px;
+  font-weight: 850;
+  letter-spacing: 0.08em;
+  line-height: 1.2;
+  text-transform: uppercase;
+}
+
+.contact-links strong {
+  display: block;
+  overflow-wrap: anywhere;
+  color: var(--surface);
+  font-size: 16px;
+  line-height: 1.25;
 }
 
 .contact-links a:hover {
@@ -1357,10 +1493,9 @@ h3 {
 
   .hero,
   .section-grid,
-  .contact-grid,
+  .closing-grid,
   .featured-project,
   .activity-panel,
-  .cv-panel,
   .cv-hero {
     grid-template-columns: 1fr;
   }
@@ -1438,8 +1573,12 @@ h3 {
     grid-template-columns: 1fr;
   }
 
-  .cv-actions {
-    justify-content: flex-start;
+  .closing-grid {
+    gap: 32px;
+  }
+
+  .closing-proof {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
   }
 
   .project-actions {
@@ -1668,7 +1807,7 @@ h3 {
   }
 
   .profile-band,
-  .contact-band {
+  .closing-band {
     padding: 56px 0;
   }
 
@@ -1704,12 +1843,44 @@ h3 {
   }
 
   .work-band,
-  .cv-panel {
+  .closing-band {
     margin-top: 64px;
   }
 
-  .cv-panel {
-    padding: 24px;
+  .closing-grid {
+    gap: 24px;
+  }
+
+  .closing-actions {
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+
+  .closing-actions .button {
+    width: 100%;
+  }
+
+  .closing-proof {
+    grid-template-columns: 1fr;
+  }
+
+  .contact-panel {
+    padding: 18px;
+  }
+
+  .contact-panel-head {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 4px;
+  }
+
+  .contact-links a {
+    min-height: 66px;
+    padding: 12px;
+  }
+
+  .contact-links strong {
+    font-size: 15px;
   }
 
   .site-footer {
