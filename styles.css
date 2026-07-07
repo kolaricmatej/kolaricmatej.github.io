@@ -189,10 +189,10 @@ a {
   position: relative;
   display: grid;
   min-height: 62svh;
-  grid-template-columns: minmax(0, 1.12fr) minmax(280px, 0.7fr);
+  grid-template-columns: minmax(0, 1.08fr) minmax(330px, 0.72fr);
   align-items: center;
-  gap: 56px;
-  padding: 42px 0 32px;
+  gap: 76px;
+  padding: 54px 0 44px;
 }
 
 .hero-content {
@@ -298,7 +298,8 @@ h3 {
 .feature-card svg,
 .featured-project svg,
 .print-button svg,
-.signal-list svg {
+.signal-list svg,
+.portrait-badge svg {
   width: 18px;
   height: 18px;
   flex: 0 0 auto;
@@ -360,38 +361,52 @@ h3 {
 }
 
 .hero-visual {
+  position: relative;
   display: grid;
   justify-items: center;
-  gap: 26px;
+  gap: 22px;
+  align-self: center;
+}
+
+.hero-visual::before {
+  position: absolute;
+  inset: auto 0 18px;
+  height: 160px;
+  pointer-events: none;
+  content: "";
+  background: radial-gradient(ellipse, rgba(201, 149, 47, 0.14), transparent 68%);
 }
 
 .portrait-card {
   position: relative;
-  padding: 12px;
-  border: 1px solid rgba(216, 222, 230, 0.9);
-  border-radius: var(--radius);
+  width: min(34vw, 390px);
+  aspect-ratio: 1;
+  padding: 16px;
+  border: 0;
+  border-radius: 50%;
   background:
-    linear-gradient(135deg, rgba(255, 255, 255, 0.96), rgba(237, 241, 243, 0.86)),
-    var(--surface);
-  box-shadow: var(--shadow);
+    radial-gradient(circle, rgba(255, 255, 255, 0.98) 58%, transparent 59%),
+    radial-gradient(circle, rgba(255, 228, 127, 0.32) 63%, transparent 64%),
+    radial-gradient(circle, rgba(201, 149, 47, 0.22) 74%, transparent 75%);
+  box-shadow: none;
 }
 
 .portrait-card::before {
   position: absolute;
-  top: 18px;
-  right: -12px;
-  bottom: 44px;
-  width: 12px;
-  border-radius: 0 var(--radius) var(--radius) 0;
-  background: linear-gradient(180deg, var(--accent), var(--warm));
+  inset: -18px;
+  z-index: 0;
+  border-radius: 50%;
+  background: rgba(255, 218, 92, 0.15);
   content: "";
 }
 
 .profile-photo {
-  width: 280px;
-  height: 340px;
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  height: 100%;
   border: 0;
-  border-radius: var(--radius);
+  border-radius: 50%;
   box-shadow: 0 0 0 1px rgba(47, 111, 159, 0.16);
   object-fit: cover;
   object-position: center top;
@@ -399,41 +414,36 @@ h3 {
 
 .portrait-badge {
   position: absolute;
-  right: 24px;
+  right: -6px;
   bottom: 24px;
-  max-width: 220px;
-  padding: 12px 14px;
+  z-index: 2;
+  display: inline-flex;
+  align-items: center;
+  gap: 9px;
+  max-width: none;
+  padding: 13px 17px;
   border: 1px solid rgba(255, 255, 255, 0.16);
-  border-radius: var(--radius);
+  border-radius: 999px;
   background: rgba(23, 33, 43, 0.92);
   color: var(--surface);
   box-shadow: 0 18px 42px rgba(23, 33, 43, 0.24);
+  white-space: nowrap;
 }
 
-.portrait-badge span {
-  display: block;
-  color: rgba(255, 255, 255, 0.62);
-  font-size: 11px;
-  font-weight: 850;
-  letter-spacing: 0.04em;
-  text-transform: uppercase;
+.portrait-badge svg {
+  color: #f4ca3a;
 }
 
 .portrait-badge strong {
   display: block;
-  margin-top: 2px;
+  margin-top: 0;
+  color: #f4ca3a;
   font-size: 15px;
-}
-
-.portrait-badge-mobile {
-  display: none;
+  line-height: 1;
 }
 
 .signal-list {
-  display: grid;
-  width: min(100%, 330px);
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 10px;
+  display: none;
 }
 
 .signal-list span {
@@ -1138,21 +1148,20 @@ h3 {
   }
 
   .hero-visual {
-    grid-template-columns: 246px minmax(0, 1fr);
+    grid-template-columns: 1fr;
     align-items: center;
-    justify-items: start;
+    justify-items: center;
     gap: 18px;
   }
 
-  .profile-photo {
-    width: 220px;
-    height: 282px;
+  .portrait-card {
+    width: min(64vw, 340px);
   }
 
   .portrait-badge {
-    right: 18px;
-    bottom: 18px;
-    max-width: 190px;
+    right: -4px;
+    bottom: 24px;
+    max-width: none;
   }
 
   .hero-visual .signal-list {
@@ -1411,20 +1420,6 @@ h3 {
     background: var(--accent-strong);
     box-shadow: 0 16px 36px rgba(23, 33, 43, 0.24);
     white-space: nowrap;
-  }
-
-  .portrait-badge .portrait-badge-label,
-  .portrait-badge .portrait-badge-title {
-    display: none;
-  }
-
-  .portrait-badge .portrait-badge-mobile {
-    display: block;
-    margin: 0;
-    color: #f4ca3a;
-    font-size: 13px;
-    line-height: 1;
-    text-transform: none;
   }
 
   .profile-band,
