@@ -614,18 +614,6 @@ h3 {
   content: "";
 }
 
-.feature-card::after,
-.highlight-grid article::after {
-  position: absolute;
-  right: 22px;
-  bottom: 20px;
-  width: 58px;
-  height: 58px;
-  border: 1px solid rgba(47, 111, 159, 0.12);
-  border-radius: 50%;
-  content: "";
-}
-
 .highlight-grid article {
   position: relative;
   border-top: 4px solid var(--accent);
